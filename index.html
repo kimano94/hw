@@ -4,17 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body {
-            font-size: 45px;
+    <style> 
+        @keyframes changeColor {
+            45%{ color:green; }
+        }
+
+        p   {
+            font-weight: 800;
+            font-size: 205px;
             color: red;
-            font-family: serif;
+            font-family: sans-serif;
+            animation: changeColor 3s ease-in-out 2s infinite;
         }
     </style>
 </head>
 <body>
+    <p id = "paragraph"></p>
     <script>
-        document.write("Hello world")
+        let text_1 = document.getElementById("paragraph")
+        text_1.innerHTML = "Hello world!"
     </script>
 </body>
 </html>
